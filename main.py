@@ -57,16 +57,18 @@ def tr():
     typeracertext = image_to_string(image)
     styperacer = typeracertext[:-1]
     filter = styperacer.replace('|', 'I')
-    filter = filter.replace('Lf', 'If')
+    filter = filter.replace('|f', 'If')
     filter = filter.replace('Guest', '')
-    filter = filter.replace('>', '')
+    filter = filter.replace('’', '\'')
+    filter = filter.replace('‘', '\'')
     filter = filter.replace('>', '')
     filter = filter.replace('\\', '')
     filter = filter.replace('change display format', '')
-    bignew = filter.replace(' ', ' ').split()
-    print(bignew)
+    filter = filter.replace('Vh', 'Wh')
+    word_list = filter.replace('', '').split()
+    print(word_list)
     time.sleep(1.2)
-    for word in bignew:
+    for word in word_list:
         keyboard.type(word)
         keyboard.press(Key.space)
         time.sleep(0.1)
